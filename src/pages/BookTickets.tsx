@@ -125,7 +125,7 @@ const BookTickets = () => {
               fontSize: 'clamp(2.5rem, 6vw, 5rem)',
               fontWeight: 700,
               lineHeight: 1.2,
-              marginTop: '2.3rem',
+              marginTop: '3.21rem',
               marginBottom: 'clamp(1rem, 3vw, 2rem)',
             }}
           >
@@ -159,7 +159,7 @@ const BookTickets = () => {
       {/* Google Form Section */}
       <section
         style={{
-          padding: 'clamp(2rem, 4vw, 4rem) 0 clamp(3rem, 6vw, 6rem)',
+          padding: 'clamp(2rem, 4vw, 3rem) 0',
           background: 'linear-gradient(180deg, #000000 0%, #0d1117 50%, #1a1f2e 100%)',
           position: 'relative',
         }}
@@ -268,24 +268,30 @@ const BookTickets = () => {
               }}
             >
               {/* Google Form iframe */}
-              <iframe
-                src={googleFormUrl}
-                width="100%"
-                height="1200"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                style={{
-                  borderRadius: 'clamp(0.5rem, 1.5vw, 1rem)',
-                  background: '#ffffff',
-                  border: 'none',
-                  display: 'block',
-                }}
-                title="Registration Form"
-                className="google-form-iframe"
-              >
+    <div
+  style={{
+    width: '100%',
+    overflow: 'hidden',
+  }}
+>
+  <iframe
+    src={googleFormUrl}
+    title="Registration Form"
+    loading="lazy"
+    style={{
+      width: '100%',
+      height: '100vh',        // KEY FIX
+      minHeight: '700px',     // prevents cut-off
+      borderRadius: 'clamp(0.5rem, 1.5vw, 1rem)',
+      background: '#ffffff',
+      border: 'none',
+      display: 'block',
+    }}
+  />
+</div>
+
                 Loading…
-              </iframe>
+            
             </div>
           </div>
 
@@ -585,28 +591,28 @@ const BookTickets = () => {
           }
         }
 
-        /* Responsive iframe heights */
-        .google-form-iframe {
-          height: 1200px;
-        }
+        // /* Responsive iframe heights */
+        // .google-form-iframe {
+        //   height: 1200px;
+        // }
 
-        @media (max-width: 768px) {
-          .google-form-iframe {
-            height: 1500px !important;
-          }
-        }
+        // @media (max-width: 768px) {
+        //   .google-form-iframe {
+        //     height: 1500px !important;
+        //   }
+        // }
 
-        @media (max-width: 480px) {
-          .google-form-iframe {
-            height: 1800px !important;
-          }
-        }
+        // @media (max-width: 480px) {
+        //   .google-form-iframe {
+        //     height: 1800px !important;
+        //   }
+        // }
 
-        @media (max-width: 360px) {
-          .google-form-iframe {
-            height: 2000px !important;
-          }
-        }
+        // @media (max-width: 360px) {
+        //   .google-form-iframe {
+        //     height: 2000px !important;
+        //   }
+        // }
       `}</style>
     </div>
   );

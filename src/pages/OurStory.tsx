@@ -166,7 +166,7 @@ const OurStory = () => {
             <div style={{ position: 'absolute', top: '18%', right: '10%', width: '180px', height: '180px', border: '2px solid rgba(0, 168, 232, 0.25)', borderRadius: '50%', animation: 'pulse 4s ease-in-out infinite' }} />
             <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem', textAlign: 'center', zIndex: 2 }}>
               {/* <p style={{ textTransform: 'uppercase', color: '#00a8e8', fontWeight: 600, letterSpacing: '0.15em', marginBottom: '1.5rem', fontFamily: 'Montserrat, sans-serif', fontSize: 'clamp(0.75rem, 2vw, 0.875rem)' }}>— ABOUT US</p> */}
-              <h1 style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 'clamp(3rem, 8vw, 5.5rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '2rem', marginTop: '2rem' }}>
+              <h1 style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 'clamp(3rem, 8vw, 5.5rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '2rem', marginTop: '6rem' }}>
                 <span style={{ background: 'linear-gradient(135deg, #00a8e8 0%, #5fc2b8 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>OUR</span>{' '}
                 <span style={{ color: '#ffffff' }}>STORY</span>
               </h1>

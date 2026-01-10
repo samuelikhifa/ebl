@@ -191,7 +191,7 @@ const PartnerWithUs = () => {
                 fontSize: 'clamp(3rem, 6vw, 5rem)',
                 fontWeight: 700,
                 lineHeight: 1.2,
-                marginTop: '2.3rem',
+                marginTop: '6.3rem',
                 marginBottom: '2rem',
               }}
             >

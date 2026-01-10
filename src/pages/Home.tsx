@@ -336,6 +336,7 @@ const Home = () => {
                                 position: 'relative',
                                 zIndex: 2,
                                 width: '100%',
+                                marginTop: '4rem'
                             }}
                         >
                             <div style={{ position: 'relative', textAlign: 'center' }}>
