@@ -1,0 +1,17 @@
+{
+  "name": "EBL Masterclass",
+  "short_name": "EBL",
+  "description": "Employability, Business & Leadership Masterclass — JCIN UNIBEN",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1f2e",
+  "theme_color": "#00a8e8",
+  "icons": [
+    {
+      "src": "/ebllogo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

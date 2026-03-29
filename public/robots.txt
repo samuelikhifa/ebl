@@ -1,0 +1,5 @@
+# https://ebl.jcinuniben.com
+User-agent: *
+Allow: /
+
+Sitemap: https://ebl.jcinuniben.com/sitemap.xml
