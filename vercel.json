@@ -1,9 +1,19 @@
 {
+  "installCommand": "npm install --legacy-peer-deps",
   "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "/index.html"
-    }
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/site.webmanifest", "destination": "/site.webmanifest" },
+    { "source": "/:path*", "destination": "/index.html" }
   ],
-  "installCommand": "npm install --legacy-peer-deps"
+  "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [{ "key": "Content-Type", "value": "application/xml; charset=utf-8" }]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+    }
+  ]
 }
