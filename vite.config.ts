@@ -15,9 +15,6 @@ export default defineConfig({
           if (id.includes('node_modules/react-router')) {
             return 'vendor-router';
           }
-          if (id.includes('node_modules/react-helmet-async')) {
-            return 'vendor-helmet';
-          }
         },
       },
     },
