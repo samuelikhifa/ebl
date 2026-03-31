@@ -213,7 +213,7 @@ function validateStep(step: number, form: FormState): string | null {
       if (!form.phoneWhatsApp.trim()) return 'Phone Number (WhatsApp) is required.';
       return null;
     case 7:
-      // if (!form.expectations.trim()) return 'What are you expecting from EBL Masterclass 8.0? is required.';
+      if (!form.expectations.trim()) return 'What are you expecting from EBL Masterclass 8.0? is required.';
       return null;
     default:
       return null;
@@ -235,8 +235,12 @@ const BookTickets = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
-  const [submitArmed, setSubmitArmed] = useState(false);
-  const [supabaseReady, setSupabaseReady] = useState(false);
+  const [supabaseReady, setSupabaseReady] = useState(() => {
+    const w = window as unknown as {
+      supabase?: { createClient: (url: string, key: string) => SupabaseBrowserClient };
+    };
+    return Boolean(w.supabase?.createClient);
+  });
   const [supabaseLoadError, setSupabaseLoadError] = useState<string | null>(null);
 
   const progressPercent = useMemo(() => (step / TOTAL_STEPS) * 100, [step]);
@@ -247,7 +251,6 @@ const BookTickets = () => {
     };
 
     if (w.supabase?.createClient) {
-      setSupabaseReady(true);
       return;
     }
 
@@ -273,7 +276,6 @@ const BookTickets = () => {
 
   const goNext = () => {
     setStepError(null);
-    setSubmitArmed(false);
     const err = validateStep(step, form);
     if (err) {
       setStepError(err);
@@ -284,25 +286,18 @@ const BookTickets = () => {
 
   const goPrev = () => {
     setStepError(null);
-    setSubmitArmed(false);
     setStep((s) => Math.max(1, s - 1));
   };
 
-  const handleFinalSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleFinalSubmit = async () => {
     setSubmitError(null);
-    if (!submitArmed) {
-      return;
-    }
     if (!supabaseReady) {
       setSubmitError(supabaseLoadError ?? 'Registration service is still loading. Please wait a moment and try again.');
-      setSubmitArmed(false);
       return;
     }
     const err = validateAll(form);
     if (err) {
       setSubmitError(err);
-      setSubmitArmed(false);
       return;
     }
 
@@ -310,7 +305,6 @@ const BookTickets = () => {
     const waUrl = ACADEMY_WHATSAPP_LINKS[form.academyInterest];
     if (!waUrl) {
       setSubmitError('No WhatsApp link configured for the selected academy.');
-      setSubmitArmed(false);
       return;
     }
 
@@ -338,7 +332,6 @@ const BookTickets = () => {
       if (error) {
         setSubmitError(error.message);
         setSubmitting(false);
-        setSubmitArmed(false);
         return;
       }
       setSuccess(true);
@@ -349,7 +342,6 @@ const BookTickets = () => {
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong.');
       setSubmitting(false);
-      setSubmitArmed(false);
     }
   };
 
@@ -634,7 +626,7 @@ const BookTickets = () => {
               </div>
 
               <form
-                onSubmit={step === TOTAL_STEPS ? handleFinalSubmit : (e) => e.preventDefault()}
+                onSubmit={(e) => e.preventDefault()}
                 noValidate
               >
                 {/* SECTION 1 */}
@@ -968,9 +960,11 @@ const BookTickets = () => {
                     </button>
                   ) : (
                     <button
-                      type="submit"
+                      type="button"
                       id="submit-registration-btn"
-                      onClick={() => setSubmitArmed(true)}
+                      onClick={() => {
+                        void handleFinalSubmit();
+                      }}
                       disabled={submitting || success}
                       style={{
                         marginLeft: 'auto',
