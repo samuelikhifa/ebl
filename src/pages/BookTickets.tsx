@@ -1,5 +1,5 @@
 // src/pages/BookTickets.tsx
-import { useMemo, useState, type CSSProperties } from 'react';
+import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 /*
@@ -107,7 +107,7 @@ function getSupabaseClient(): SupabaseBrowserClient {
     supabase?: { createClient: (url: string, key: string) => SupabaseBrowserClient };
   };
   if (!w.supabase?.createClient) {
-    throw new Error('Supabase JS client not loaded. Ensure the CDN script is in index.html.');
+    throw new Error('Supabase JS client not loaded yet.');
   }
   return w.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 }
@@ -235,8 +235,37 @@ const BookTickets = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
+  const [submitArmed, setSubmitArmed] = useState(false);
+  const [supabaseReady, setSupabaseReady] = useState(false);
+  const [supabaseLoadError, setSupabaseLoadError] = useState<string | null>(null);
 
   const progressPercent = useMemo(() => (step / TOTAL_STEPS) * 100, [step]);
+
+  useEffect(() => {
+    const w = window as unknown as {
+      supabase?: { createClient: (url: string, key: string) => SupabaseBrowserClient };
+    };
+
+    if (w.supabase?.createClient) {
+      setSupabaseReady(true);
+      return;
+    }
+
+    const existing = document.getElementById('supabase-js-cdn') as HTMLScriptElement | null;
+    if (existing) {
+      existing.addEventListener('load', () => setSupabaseReady(true), { once: true });
+      existing.addEventListener('error', () => setSupabaseLoadError('Could not load registration service.'), { once: true });
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.id = 'supabase-js-cdn';
+    script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js';
+    script.async = true;
+    script.onload = () => setSupabaseReady(true);
+    script.onerror = () => setSupabaseLoadError('Could not load registration service.');
+    document.body.appendChild(script);
+  }, []);
 
   const updateField = <K extends keyof FormState>(key: K, value: FormState[K]) => {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -244,6 +273,7 @@ const BookTickets = () => {
 
   const goNext = () => {
     setStepError(null);
+    setSubmitArmed(false);
     const err = validateStep(step, form);
     if (err) {
       setStepError(err);
@@ -254,15 +284,25 @@ const BookTickets = () => {
 
   const goPrev = () => {
     setStepError(null);
+    setSubmitArmed(false);
     setStep((s) => Math.max(1, s - 1));
   };
 
   const handleFinalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
+    if (!submitArmed) {
+      return;
+    }
+    if (!supabaseReady) {
+      setSubmitError(supabaseLoadError ?? 'Registration service is still loading. Please wait a moment and try again.');
+      setSubmitArmed(false);
+      return;
+    }
     const err = validateAll(form);
     if (err) {
       setSubmitError(err);
+      setSubmitArmed(false);
       return;
     }
 
@@ -270,6 +310,7 @@ const BookTickets = () => {
     const waUrl = ACADEMY_WHATSAPP_LINKS[form.academyInterest];
     if (!waUrl) {
       setSubmitError('No WhatsApp link configured for the selected academy.');
+      setSubmitArmed(false);
       return;
     }
 
@@ -297,6 +338,7 @@ const BookTickets = () => {
       if (error) {
         setSubmitError(error.message);
         setSubmitting(false);
+        setSubmitArmed(false);
         return;
       }
       setSuccess(true);
@@ -307,6 +349,7 @@ const BookTickets = () => {
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong.');
       setSubmitting(false);
+      setSubmitArmed(false);
     }
   };
 
@@ -926,6 +969,8 @@ const BookTickets = () => {
                   ) : (
                     <button
                       type="submit"
+                      id="submit-registration-btn"
+                      onClick={() => setSubmitArmed(true)}
                       disabled={submitting || success}
                       style={{
                         marginLeft: 'auto',
