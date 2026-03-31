@@ -149,20 +149,24 @@ const Home = () => {
         const container = partnersRef.current;
         if (!container) return;
 
+        // Performance: avoid continuous JS-driven scrolling on small screens.
+        if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) {
+            return;
+        }
+
         let scrollPos = 0;
         const speed = 0.5;
 
-        const scroll = () => {
+        // Performance: use a timer instead of a requestAnimationFrame loop.
+        const interval = window.setInterval(() => {
             scrollPos += speed;
             if (scrollPos >= container.scrollWidth / 2) {
                 scrollPos = 0;
             }
             container.scrollLeft = scrollPos;
-            requestAnimationFrame(scroll);
-        };
+        }, 50);
 
-        const animation = requestAnimationFrame(scroll);
-        return () => cancelAnimationFrame(animation);
+        return () => window.clearInterval(interval);
     }, []);
 
     const partners = [
