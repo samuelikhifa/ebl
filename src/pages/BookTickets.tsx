@@ -538,7 +538,7 @@ const BookTickets = () => {
                       margin: 0,
                     }}
                   >
-                    Registration submitted successfully! Redirecting you to your academy WhatsApp group…
+                    Registration submitted successfully!
                   </p>
                 </div>
               )}
