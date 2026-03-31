@@ -47,7 +47,7 @@ const ATTENDED_OPTIONS = ['Yes', 'No', 'Maybe'] as const;
 
 const ACADEMY_INTEREST_OPTIONS = [
   'Employability Academy',
-  'Business (Mastery) Academy',
+  'Business (Core) Academy',
   'Advanced Business Class',
   'Leadership Academy',
 ] as const;
