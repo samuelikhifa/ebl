@@ -213,7 +213,7 @@ function validateStep(step: number, form: FormState): string | null {
       if (!form.phoneWhatsApp.trim()) return 'Phone Number (WhatsApp) is required.';
       return null;
     case 7:
-      if (!form.expectations.trim()) return 'What are you expecting from EBL Masterclass 8.0? is required.';
+      // if (!form.expectations.trim()) return 'What are you expecting from EBL Masterclass 8.0? is required.';
       return null;
     default:
       return null;
