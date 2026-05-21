@@ -42,7 +42,7 @@ const CountdownSection = () => {
 
     useEffect(() => {
         const calculateTimeLeft = () => {
-            const difference = +new Date('2026-04-07T00:00:00') - +new Date();
+            const difference = +new Date('2026-06-07T00:00:00') - +new Date();
 
             if (difference > 0) {
                 setTimeLeft({
@@ -140,7 +140,7 @@ const CountdownSection = () => {
 };
 // ── MAIN HOME PAGE COMPONENT ──
 const Home = () => {
- 
+
 
     // Partners carousel ref
     const partnersRef = useRef<HTMLDivElement>(null);
@@ -443,7 +443,7 @@ const Home = () => {
                                             fontFamily: 'Roboto, sans-serif',
                                         }}
                                     >
-                                        APRIL 2026
+                                        JUNE 2026
                                     </p>
                                 </div>
                             </div>
@@ -713,7 +713,7 @@ const Home = () => {
                                                     fontWeight: 300,
                                                 }}
                                             >
-                                                30th April - 6th June, 2026
+                                                07th June - 18th July, 2026
                                             </p>
                                         </div>
                                         <a

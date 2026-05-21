@@ -36,7 +36,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 /** Map Section 4 academy labels to WhatsApp group invite URLs (replace placeholders). */
 const ACADEMY_WHATSAPP_LINKS: Record<string, string> = {
   'Employability Academy': 'https://chat.whatsapp.com/LxvIk09oh7QB5avwyvFoXt',
-  'Business (Core) Academy': 'https://chat.whatsapp.com/LNdFpZJn50v0sMjw2hc9W8',
+  'Foundational Business Academy': 'https://chat.whatsapp.com/LNdFpZJn50v0sMjw2hc9W8',
   'Advanced Business Class': 'https://chat.whatsapp.com/BmFiQ469R953ISZ3OUZ5hL',
   'Leadership Academy': 'https://chat.whatsapp.com/KYeOtHOHKNl5GSO3ioTSq6',
 };
@@ -47,7 +47,7 @@ const ATTENDED_OPTIONS = ['Yes', 'No', 'Maybe'] as const;
 
 const ACADEMY_INTEREST_OPTIONS = [
   'Employability Academy',
-  'Business (Core) Academy',
+  'Foundational Business Academy',
   'Advanced Business Class',
   'Leadership Academy',
 ] as const;
