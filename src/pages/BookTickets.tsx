@@ -70,6 +70,7 @@ export type EblRegistrationPayload = {
   email_address: string;
   phone_whatsapp: string;
   expectations_from_ebl_8: string;
+  local_organization: string;
 };
 
 type FormState = {
@@ -85,6 +86,7 @@ type FormState = {
   grandFinalePresent: (typeof YES_NO)[number] | '';
   phoneWhatsApp: string;
   expectations: string;
+  localOrganization: string;
 };
 
 const emptyForm = (): FormState => ({
@@ -100,6 +102,7 @@ const emptyForm = (): FormState => ({
   grandFinalePresent: '',
   phoneWhatsApp: '',
   expectations: '',
+  localOrganization: '',
 });
 
 function getSupabaseClient(): SupabaseBrowserClient {
@@ -175,6 +178,7 @@ function buildPayload(form: FormState): EblRegistrationPayload {
     email_address: form.email.trim(),
     phone_whatsapp: form.phoneWhatsApp.trim(),
     expectations_from_ebl_8: form.expectations.trim(),
+    local_organization: form.localOrganization.trim(),
   };
 }
 
@@ -189,6 +193,7 @@ function validateStep(step: number, form: FormState): string | null {
       if (!form.classLevel) return 'Class / Level is required.';
       if (!form.department.trim()) return 'Department is required.';
       if (!form.faculty.trim()) return 'Faculty is required.';
+      if (!form.localOrganization.trim()) return 'Local organization is required.';
       return null;
     case 3:
       if (!form.attendedBefore) return 'Please answer whether you have attended any EBL Masterclass before.';
@@ -327,6 +332,7 @@ const BookTickets = () => {
         academy_choice: payload.academy_interest,
         grand_finale_present: payload.grand_finale_present,
         expectations_from_ebl_8: payload.expectations_from_ebl_8,
+        local_organization: payload.local_organization,
       });
 
       if (error) {
@@ -710,6 +716,19 @@ const BookTickets = () => {
                         type="text"
                         value={form.faculty}
                         onChange={(e) => updateField('faculty', e.target.value)}
+                        style={inputStyle}
+                      />
+                    </div>
+                    <div style={fieldWrapStyle}>
+                      <label htmlFor="local_organization" style={labelStyle}>
+                        Which local organization are you from? <span style={{ color: '#f4b942' }}>*</span>
+                      </label>
+                      <input
+                        id="local_organization"
+                        name="local_organization"
+                        type="text"
+                        value={form.localOrganization}
+                        onChange={(e) => updateField('localOrganization', e.target.value)}
                         style={inputStyle}
                       />
                     </div>
