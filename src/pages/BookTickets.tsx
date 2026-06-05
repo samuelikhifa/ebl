@@ -836,7 +836,7 @@ const BookTickets = () => {
                     <div>
                       <h3 style={sectionTitleStyle}>SECTION 5: Event Commitment</h3>
                       <div style={fieldWrapStyle}>
-                        <span style={labelStyle}>Will you be present at the EBL Grand Finale holding physically on the 18th of July? <span style={{ color: '#f4b942' }}>*</span>Will you be present at the EBL Grand Finale? <span style={{ color: '#f4b942' }}>*</span>
+                        <span style={labelStyle}>Will you be present at the EBL Grand Finale holding physically on the 18th of July? <span style={{ color: '#f4b942' }}>*</span>
                         </span>
                         <div style={radioGroupStyle} role="radiogroup" aria-label="Grand Finale attendance">
                           {YES_NO.map((opt) => (
