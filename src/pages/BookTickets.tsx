@@ -210,7 +210,7 @@ function validateStep(step: number, form: FormState): string | null {
       if (!form.academyInterest) return 'Please select which academy you are interested in this time.';
       return null;
     case 5:
-      if (!form.grandFinalePresent) return 'Will you be present at the EBL Grand Finale? is required.';
+      if (!form.grandFinalePresent) return 'Will you be present at the EBL Grand Finale holding physically on the 18th of July? is required.';
       return null;
     case 6:
       if (!form.email.trim()) return 'Email Address is required.';
