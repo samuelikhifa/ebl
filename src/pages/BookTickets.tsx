@@ -383,634 +383,637 @@ const BookTickets = () => {
         <meta property="og:image" content="https://ebl.jcinuniben.com/ebllogo.webp" />
         <meta name="robots" content="index, follow" />
       </Helmet>
-    <div style={{ fontFamily: 'Roboto, sans-serif', color: '#ffffff', position: 'relative' }}>
-      <section
-        style={{
-          position: 'relative',
-          minHeight: '40vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: 'linear-gradient(135deg, #1a1f2e 0%, #000000 100%)',
-          paddingTop: 'clamp(100px, 15vw, 120px)',
-          paddingBottom: 'clamp(2rem, 5vw, 3rem)',
-          overflow: 'hidden',
-        }}
-      >
-        <div
+      <div style={{ fontFamily: 'Roboto, sans-serif', color: '#ffffff', position: 'relative' }}>
+        <section
           style={{
-            position: 'absolute',
-            top: '20%',
-            right: '10%',
-            width: 'clamp(150px, 30vw, 300px)',
-            height: 'clamp(150px, 30vw, 300px)',
-            background: 'radial-gradient(circle, rgba(0, 168, 232, 0.2) 0%, transparent 70%)',
-            borderRadius: '50%',
-            filter: 'blur(60px)',
-            animation: 'float 6s ease-in-out infinite',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '10%',
-            left: '10%',
-            width: 'clamp(200px, 40vw, 400px)',
-            height: 'clamp(200px, 40vw, 400px)',
-            background: 'radial-gradient(circle, rgba(95, 194, 184, 0.2) 0%, transparent 70%)',
-            borderRadius: '50%',
-            filter: 'blur(60px)',
-            animation: 'float 8s ease-in-out infinite',
-            animationDelay: '2s',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 'clamp(250px, 50vw, 500px)',
-            height: 'clamp(250px, 50vw, 500px)',
-            background: 'radial-gradient(circle, rgba(244, 185, 66, 0.1) 0%, transparent 70%)',
-            borderRadius: '50%',
-            filter: 'blur(80px)',
-            animation: 'float 10s ease-in-out infinite',
-            animationDelay: '4s',
-          }}
-        />
-
-        <div
-          style={{
-            maxWidth: '1280px',
-            margin: '0 auto',
-            padding: '0 clamp(1rem, 3vw, 2rem)',
             position: 'relative',
-            zIndex: 2,
-            textAlign: 'center',
+            minHeight: '40vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'linear-gradient(135deg, #1a1f2e 0%, #000000 100%)',
+            paddingTop: 'clamp(100px, 15vw, 120px)',
+            paddingBottom: 'clamp(2rem, 5vw, 3rem)',
+            overflow: 'hidden',
           }}
         >
-          <h1
+          <div
             style={{
-              fontFamily: 'Montserrat, sans-serif',
-              fontSize: 'clamp(2.5rem, 6vw, 5rem)',
-              fontWeight: 700,
-              lineHeight: 1.2,
-              marginTop: '3.21rem',
-              marginBottom: 'clamp(1rem, 3vw, 2rem)',
+              position: 'absolute',
+              top: '20%',
+              right: '10%',
+              width: 'clamp(150px, 30vw, 300px)',
+              height: 'clamp(150px, 30vw, 300px)',
+              background: 'radial-gradient(circle, rgba(0, 168, 232, 0.2) 0%, transparent 70%)',
+              borderRadius: '50%',
+              filter: 'blur(60px)',
+              animation: 'float 6s ease-in-out infinite',
             }}
-          >
-            <span
-              style={{
-                background: 'linear-gradient(135deg, #00a8e8 0%, #5fc2b8 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              BOOK YOUR
-            </span>{' '}
-            <span style={{ color: '#ffffff' }}>TICKET</span>
-          </h1>
-          <p
+          />
+          <div
             style={{
-              fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
-              lineHeight: 1.8,
-              color: 'rgba(255, 255, 255, 0.8)',
-              maxWidth: '700px',
-              margin: '0 auto',
+              position: 'absolute',
+              bottom: '10%',
+              left: '10%',
+              width: 'clamp(200px, 40vw, 400px)',
+              height: 'clamp(200px, 40vw, 400px)',
+              background: 'radial-gradient(circle, rgba(95, 194, 184, 0.2) 0%, transparent 70%)',
+              borderRadius: '50%',
+              filter: 'blur(60px)',
+              animation: 'float 8s ease-in-out infinite',
+              animationDelay: '2s',
             }}
-          >
-            Join students, and enterprising leaders at EBL Masterclass 8.0
-          </p>
-        </div>
-      </section>
-
-      <section
-        style={{
-          padding: 'clamp(2rem, 4vw, 3rem) 0',
-          background: 'linear-gradient(180deg, #000000 0%, #0d1117 50%, #1a1f2e 100%)',
-          position: 'relative',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            top: '10%',
-            left: '5%',
-            width: 'clamp(100px, 20vw, 200px)',
-            height: 'clamp(100px, 20vw, 200px)',
-            border: '2px solid rgba(0, 168, 232, 0.2)',
-            borderRadius: '50%',
-            animation: 'pulse 3s ease-in-out infinite',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '10%',
-            right: '5%',
-            width: 'clamp(150px, 30vw, 300px)',
-            height: 'clamp(150px, 30vw, 300px)',
-            border: '2px solid rgba(95, 194, 184, 0.2)',
-            borderRadius: '50%',
-            animation: 'pulse 4s ease-in-out infinite',
-            animationDelay: '1s',
-          }}
-        />
-
-        <div
-          style={{
-            maxWidth: '900px',
-            margin: '0 auto',
-            padding: '0 clamp(1rem, 3vw, 2rem)',
-            position: 'relative',
-            zIndex: 2,
-          }}
-        >
-          <div style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
-          </div>
+          />
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 'clamp(250px, 50vw, 500px)',
+              height: 'clamp(250px, 50vw, 500px)',
+              background: 'radial-gradient(circle, rgba(244, 185, 66, 0.1) 0%, transparent 70%)',
+              borderRadius: '50%',
+              filter: 'blur(80px)',
+              animation: 'float 10s ease-in-out infinite',
+              animationDelay: '4s',
+            }}
+          />
 
           <div
             style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              backdropFilter: 'blur(20px)',
-              border: '2px solid rgba(0, 168, 232, 0.3)',
-              borderRadius: 'clamp(1rem, 2vw, 1.5rem)',
-              padding: 'clamp(1rem, 3vw, 2rem)',
-              boxShadow: '0 20px 60px rgba(0, 168, 232, 0.2)',
+              maxWidth: '1280px',
+              margin: '0 auto',
+              padding: '0 clamp(1rem, 3vw, 2rem)',
               position: 'relative',
-              overflow: 'hidden',
+              zIndex: 2,
+              textAlign: 'center',
             }}
           >
+            <h1
+              style={{
+                fontFamily: 'Montserrat, sans-serif',
+                fontSize: 'clamp(2.5rem, 6vw, 5rem)',
+                fontWeight: 700,
+                lineHeight: 1.2,
+                marginTop: '3.21rem',
+                marginBottom: 'clamp(1rem, 3vw, 2rem)',
+              }}
+            >
+              <span
+                style={{
+                  background: 'linear-gradient(135deg, #00a8e8 0%, #5fc2b8 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                BOOK YOUR
+              </span>{' '}
+              <span style={{ color: '#ffffff' }}>TICKET</span>
+            </h1>
+            <p
+              style={{
+                fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
+                lineHeight: 1.8,
+                color: 'rgba(255, 255, 255, 0.8)',
+                maxWidth: '700px',
+                margin: '0 auto',
+              }}
+            >
+              Join students, and enterprising leaders at EBL Masterclass 8.0
+            </p>
+          </div>
+        </section>
+
+        <section
+          style={{
+            padding: 'clamp(2rem, 4vw, 3rem) 0',
+            background: 'linear-gradient(180deg, #000000 0%, #0d1117 50%, #1a1f2e 100%)',
+            position: 'relative',
+          }}
+        >
+          <div
+            style={{
+              position: 'absolute',
+              top: '10%',
+              left: '5%',
+              width: 'clamp(100px, 20vw, 200px)',
+              height: 'clamp(100px, 20vw, 200px)',
+              border: '2px solid rgba(0, 168, 232, 0.2)',
+              borderRadius: '50%',
+              animation: 'pulse 3s ease-in-out infinite',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: '10%',
+              right: '5%',
+              width: 'clamp(150px, 30vw, 300px)',
+              height: 'clamp(150px, 30vw, 300px)',
+              border: '2px solid rgba(95, 194, 184, 0.2)',
+              borderRadius: '50%',
+              animation: 'pulse 4s ease-in-out infinite',
+              animationDelay: '1s',
+            }}
+          />
+
+          <div
+            style={{
+              maxWidth: '900px',
+              margin: '0 auto',
+              padding: '0 clamp(1rem, 3vw, 2rem)',
+              position: 'relative',
+              zIndex: 2,
+            }}
+          >
+            <div style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
+            </div>
+
             <div
               style={{
-                position: 'absolute',
-                top: '-50%',
-                left: '-50%',
-                width: '200%',
-                height: '200%',
-                background:
-                  'radial-gradient(circle, rgba(0, 168, 232, 0.1) 0%, transparent 50%)',
-                animation: 'rotate 20s linear infinite',
-                pointerEvents: 'none',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(20px)',
+                border: '2px solid rgba(0, 168, 232, 0.3)',
+                borderRadius: 'clamp(1rem, 2vw, 1.5rem)',
+                padding: 'clamp(1rem, 3vw, 2rem)',
+                boxShadow: '0 20px 60px rgba(0, 168, 232, 0.2)',
+                position: 'relative',
+                overflow: 'hidden',
               }}
-            />
+            >
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '-50%',
+                  left: '-50%',
+                  width: '200%',
+                  height: '200%',
+                  background:
+                    'radial-gradient(circle, rgba(0, 168, 232, 0.1) 0%, transparent 50%)',
+                  animation: 'rotate 20s linear infinite',
+                  pointerEvents: 'none',
+                }}
+              />
 
-            <div style={{ position: 'relative', zIndex: 1 }}>
-              {success && (
-                <div
-                  role="status"
-                  style={{
-                    textAlign: 'center',
-                    padding: 'clamp(1.5rem, 4vw, 2rem)',
-                    marginBottom: '1rem',
-                    background: 'rgba(0, 168, 232, 0.15)',
-                    border: '1px solid rgba(0, 168, 232, 0.45)',
-                    borderRadius: 'clamp(0.75rem, 2vw, 1rem)',
-                  }}
-                >
-                  <p
+              <div style={{ position: 'relative', zIndex: 1 }}>
+                {success && (
+                  <div
+                    role="status"
                     style={{
-                      fontFamily: 'Montserrat, sans-serif',
-                      fontWeight: 700,
-                      fontSize: 'clamp(1.1rem, 2.5vw, 1.35rem)',
-                      color: '#5fc2b8',
-                      margin: 0,
+                      textAlign: 'center',
+                      padding: 'clamp(1.5rem, 4vw, 2rem)',
+                      marginBottom: '1rem',
+                      background: 'rgba(0, 168, 232, 0.15)',
+                      border: '1px solid rgba(0, 168, 232, 0.45)',
+                      borderRadius: 'clamp(0.75rem, 2vw, 1rem)',
                     }}
                   >
-                    Registration submitted successfully!
-                  </p>
-                </div>
-              )}
+                    <p
+                      style={{
+                        fontFamily: 'Montserrat, sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'clamp(1.1rem, 2.5vw, 1.35rem)',
+                        color: '#5fc2b8',
+                        margin: 0,
+                      }}
+                    >
+                      Registration submitted successfully!
+                    </p>
+                  </div>
+                )}
 
-              {/* Progress */}
-              <div style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                    gap: '0.5rem',
-                    marginBottom: '0.65rem',
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: 'Montserrat, sans-serif',
-                      fontSize: 'clamp(0.85rem, 1.8vw, 1rem)',
-                      fontWeight: 600,
-                      color: 'rgba(255, 255, 255, 0.9)',
-                    }}
-                  >
-                    Section {step} of {TOTAL_STEPS}
-                  </span>
-                  <span style={{ fontSize: 'clamp(0.8rem, 1.5vw, 0.9rem)', color: 'rgba(255,255,255,0.55)' }}>
-                    {Math.round(progressPercent)}% complete
-                  </span>
-                </div>
-                <div
-                  style={{
-                    height: '8px',
-                    borderRadius: '9999px',
-                    background: 'rgba(255,255,255,0.1)',
-                    overflow: 'hidden',
-                  }}
-                >
+                {/* Progress */}
+                <div style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
                   <div
                     style={{
-                      height: '100%',
-                      width: `${(step / TOTAL_STEPS) * 100}%`,
-                      maxWidth: '100%',
-                      background: 'linear-gradient(90deg, #00a8e8 0%, #5fc2b8 100%)',
-                      borderRadius: '9999px',
-                      transition: 'width 0.35s ease',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      flexWrap: 'wrap',
+                      gap: '0.5rem',
+                      marginBottom: '0.65rem',
                     }}
-                  />
+                  >
+                    <span
+                      style={{
+                        fontFamily: 'Montserrat, sans-serif',
+                        fontSize: 'clamp(0.85rem, 1.8vw, 1rem)',
+                        fontWeight: 600,
+                        color: 'rgba(255, 255, 255, 0.9)',
+                      }}
+                    >
+                      Section {step} of {TOTAL_STEPS}
+                    </span>
+                    <span style={{ fontSize: 'clamp(0.8rem, 1.5vw, 0.9rem)', color: 'rgba(255,255,255,0.55)' }}>
+                      {Math.round(progressPercent)}% complete
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      height: '8px',
+                      borderRadius: '9999px',
+                      background: 'rgba(255,255,255,0.1)',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <div
+                      style={{
+                        height: '100%',
+                        width: `${(step / TOTAL_STEPS) * 100}%`,
+                        maxWidth: '100%',
+                        background: 'linear-gradient(90deg, #00a8e8 0%, #5fc2b8 100%)',
+                        borderRadius: '9999px',
+                        transition: 'width 0.35s ease',
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                noValidate
-              >
-                {/* SECTION 1 */}
-                {step === 1 && (
-                  <div>
-                    <h3 style={sectionTitleStyle}>SECTION 1: Registration</h3>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="reg_email" style={labelStyle}>
-                        Email <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <input
-                        id="reg_email"
-                        name="email"
-                        type="email"
-                        autoComplete="email"
-                        value={form.email}
-                        onChange={(e) => updateField('email', e.target.value)}
-                        style={inputStyle}
-                      />
-                    </div>
-                  </div>
-                )}
-
-                {/* SECTION 2 */}
-                {step === 2 && (
-                  <div>
-                    <h3 style={sectionTitleStyle}>SECTION 2: Personal Information</h3>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="full_name" style={labelStyle}>
-                        Full Name <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <input
-                        id="full_name"
-                        name="full_name"
-                        type="text"
-                        autoComplete="name"
-                        value={form.fullName}
-                        onChange={(e) => updateField('fullName', e.target.value)}
-                        style={inputStyle}
-                      />
-                    </div>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="class_level" style={labelStyle}>
-                        Class / Level <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <select
-                        id="class_level"
-                        name="class_level"
-                        value={form.classLevel}
-                        onChange={(e) => updateField('classLevel', e.target.value)}
-                        style={{ ...inputStyle, cursor: 'pointer' }}
-                      >
-                        <option value="">Select class / level</option>
-                        {CLASS_LEVEL_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="department" style={labelStyle}>
-                        Department <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <input
-                        id="department"
-                        name="department"
-                        type="text"
-                        value={form.department}
-                        onChange={(e) => updateField('department', e.target.value)}
-                        style={inputStyle}
-                      />
-                    </div>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="faculty" style={labelStyle}>
-                        Faculty <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <input
-                        id="faculty"
-                        name="faculty"
-                        type="text"
-                        value={form.faculty}
-                        onChange={(e) => updateField('faculty', e.target.value)}
-                        style={inputStyle}
-                      />
-                    </div>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="local_organization" style={labelStyle}>
-                        Which local organization are you from? <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <input
-                        id="local_organization"
-                        name="local_organization"
-                        type="text"
-                        value={form.localOrganization}
-                        onChange={(e) => updateField('localOrganization', e.target.value)}
-                        style={inputStyle}
-                      />
-                    </div>
-                  </div>
-                )}
-
-                {/* SECTION 3 */}
-                {step === 3 && (
-                  <div>
-                    <h3 style={sectionTitleStyle}>SECTION 3: EBL Masterclass Experience</h3>
-                    <div style={fieldWrapStyle}>
-                      <span style={labelStyle}>
-                        Have you attended any EBL Masterclass before? <span style={{ color: '#f4b942' }}>*</span>
-                      </span>
-                      <div style={radioGroupStyle} role="radiogroup" aria-label="Attended EBL before">
-                        {ATTENDED_OPTIONS.map((opt) => (
-                          <button
-                            key={opt}
-                            type="button"
-                            onClick={() => updateField('attendedBefore', opt)}
-                            style={radioOptionStyle(form.attendedBefore === opt)}
-                          >
-                            {opt}
-                          </button>
-                        ))}
+                <form
+                  onSubmit={(e) => e.preventDefault()}
+                  noValidate
+                >
+                  {/* SECTION 1 */}
+                  {step === 1 && (
+                    <div>
+                      <h3 style={sectionTitleStyle}>SECTION 1: Registration</h3>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="reg_email" style={labelStyle}>
+                          Email <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <input
+                          id="reg_email"
+                          name="email"
+                          type="email"
+                          autoComplete="email"
+                          value={form.email}
+                          onChange={(e) => updateField('email', e.target.value)}
+                          style={inputStyle}
+                        />
                       </div>
                     </div>
-                    {form.attendedBefore === 'Yes' && (
-                      <>
-                        <div style={fieldWrapStyle}>
-                          <label htmlFor="edition_attended" style={labelStyle}>
-                            If YES, which EBL Masterclass edition did you attend?{' '}
-                            <span style={{ color: '#f4b942' }}>*</span>
-                          </label>
-                          <input
-                            id="edition_attended"
-                            name="edition_attended"
-                            type="text"
-                            value={form.editionAttended}
-                            onChange={(e) => updateField('editionAttended', e.target.value)}
-                            style={inputStyle}
-                          />
+                  )}
+
+                  {/* SECTION 2 */}
+                  {step === 2 && (
+                    <div>
+                      <h3 style={sectionTitleStyle}>SECTION 2: Personal Information</h3>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="full_name" style={labelStyle}>
+                          Full Name <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <input
+                          id="full_name"
+                          name="full_name"
+                          type="text"
+                          autoComplete="name"
+                          value={form.fullName}
+                          onChange={(e) => updateField('fullName', e.target.value)}
+                          style={inputStyle}
+                        />
+                      </div>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="class_level" style={labelStyle}>
+                          Class / Level <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <select
+                          id="class_level"
+                          name="class_level"
+                          value={form.classLevel}
+                          onChange={(e) => updateField('classLevel', e.target.value)}
+                          style={{ ...inputStyle, cursor: 'pointer' }}
+                        >
+                          <option value="">Select class / level</option>
+                          {CLASS_LEVEL_OPTIONS.map((opt) => (
+                            <option key={opt} value={opt}>
+                              {opt}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="department" style={labelStyle}>
+                          Department <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <input
+                          id="department"
+                          name="department"
+                          type="text"
+                          value={form.department}
+                          onChange={(e) => updateField('department', e.target.value)}
+                          style={inputStyle}
+                        />
+                      </div>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="faculty" style={labelStyle}>
+                          Faculty <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <input
+                          id="faculty"
+                          name="faculty"
+                          type="text"
+                          value={form.faculty}
+                          onChange={(e) => updateField('faculty', e.target.value)}
+                          style={inputStyle}
+                        />
+                      </div>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="local_organization" style={labelStyle}>
+                          Which local organization are you from? <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <select
+                          id="local_organization"
+                          name="local_organization"
+                          value={form.localOrganization}
+                          onChange={(e) => updateField('localOrganization', e.target.value)}
+                          style={{ ...inputStyle, cursor: 'pointer' }}
+                        >
+                          <option value="">Select your local organization</option>
+                          {['JCIN UNIBEN', 'JCIN UNIABUJA', 'JCIN UNN', 'JCIN UNILORIN', 'JCIN OAU', 'JCIN UNILAG'].map((opt) => (
+                            <option key={opt} value={opt}>{opt}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* SECTION 3 */}
+                  {step === 3 && (
+                    <div>
+                      <h3 style={sectionTitleStyle}>SECTION 3: EBL Masterclass Experience</h3>
+                      <div style={fieldWrapStyle}>
+                        <span style={labelStyle}>
+                          Have you attended any EBL Masterclass before? <span style={{ color: '#f4b942' }}>*</span>
+                        </span>
+                        <div style={radioGroupStyle} role="radiogroup" aria-label="Attended EBL before">
+                          {ATTENDED_OPTIONS.map((opt) => (
+                            <button
+                              key={opt}
+                              type="button"
+                              onClick={() => updateField('attendedBefore', opt)}
+                              style={radioOptionStyle(form.attendedBefore === opt)}
+                            >
+                              {opt}
+                            </button>
+                          ))}
                         </div>
-                        <div style={fieldWrapStyle}>
-                          <label htmlFor="stood_out" style={labelStyle}>
-                            What stood out for you from the previous EBL Masterclass?{' '}
-                            <span style={{ color: '#f4b942' }}>*</span>
-                          </label>
-                          <textarea
-                            id="stood_out"
-                            name="stood_out"
-                            rows={4}
-                            value={form.previousStoodOut}
-                            onChange={(e) => updateField('previousStoodOut', e.target.value)}
-                            style={{
-                              ...inputStyle,
-                              resize: 'vertical',
-                              minHeight: '100px',
-                            }}
-                          />
+                      </div>
+                      {form.attendedBefore === 'Yes' && (
+                        <>
+                          <div style={fieldWrapStyle}>
+                            <label htmlFor="edition_attended" style={labelStyle}>
+                              If YES, which EBL Masterclass edition did you attend?{' '}
+                              <span style={{ color: '#f4b942' }}>*</span>
+                            </label>
+                            <input
+                              id="edition_attended"
+                              name="edition_attended"
+                              type="text"
+                              value={form.editionAttended}
+                              onChange={(e) => updateField('editionAttended', e.target.value)}
+                              style={inputStyle}
+                            />
+                          </div>
+                          <div style={fieldWrapStyle}>
+                            <label htmlFor="stood_out" style={labelStyle}>
+                              What stood out for you from the previous EBL Masterclass?{' '}
+                              <span style={{ color: '#f4b942' }}>*</span>
+                            </label>
+                            <textarea
+                              id="stood_out"
+                              name="stood_out"
+                              rows={4}
+                              value={form.previousStoodOut}
+                              onChange={(e) => updateField('previousStoodOut', e.target.value)}
+                              style={{
+                                ...inputStyle,
+                                resize: 'vertical',
+                                minHeight: '100px',
+                              }}
+                            />
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  )}
+
+                  {/* SECTION 4 */}
+                  {step === 4 && (
+                    <div>
+                      <h3 style={sectionTitleStyle}>SECTION 4: EBL Academy Interest</h3>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="academy_interest" style={labelStyle}>
+                          Which academy are you interested in this time?{' '}
+                          <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <select
+                          id="academy_interest"
+                          name="academy_interest"
+                          value={form.academyInterest}
+                          onChange={(e) =>
+                            updateField(
+                              'academyInterest',
+                              e.target.value as FormState['academyInterest'],
+                            )
+                          }
+                          style={{ ...inputStyle, cursor: 'pointer' }}
+                        >
+                          <option value="">Select an academy</option>
+                          {ACADEMY_INTEREST_OPTIONS.map((opt) => (
+                            <option key={opt} value={opt}>
+                              {opt}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* SECTION 5 */}
+                  {step === 5 && (
+                    <div>
+                      <h3 style={sectionTitleStyle}>SECTION 5: Event Commitment</h3>
+                      <div style={fieldWrapStyle}>
+                        <span style={labelStyle}>Will you be present at the EBL Grand Finale holding physically on the 18th of July? <span style={{ color: '#f4b942' }}>*</span>Will you be present at the EBL Grand Finale? <span style={{ color: '#f4b942' }}>*</span>
+                        </span>
+                        <div style={radioGroupStyle} role="radiogroup" aria-label="Grand Finale attendance">
+                          {YES_NO.map((opt) => (
+                            <button
+                              key={opt}
+                              type="button"
+                              onClick={() => updateField('grandFinalePresent', opt)}
+                              style={radioOptionStyle(form.grandFinalePresent === opt)}
+                            >
+                              {opt}
+                            </button>
+                          ))}
                         </div>
-                      </>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* SECTION 6 */}
+                  {step === 6 && (
+                    <div>
+                      <h3 style={sectionTitleStyle}>SECTION 6: Contact Information</h3>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="contact_email" style={labelStyle}>
+                          Email Address <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <input
+                          id="contact_email"
+                          name="contact_email"
+                          type="email"
+                          autoComplete="email"
+                          value={form.email}
+                          onChange={(e) => updateField('email', e.target.value)}
+                          style={inputStyle}
+                        />
+                      </div>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="phone_whatsapp" style={labelStyle}>
+                          Phone Number (WhatsApp) <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <input
+                          id="phone_whatsapp"
+                          name="phone_whatsapp"
+                          type="tel"
+                          autoComplete="tel"
+                          placeholder="e.g. +234 800 000 0000"
+                          value={form.phoneWhatsApp}
+                          onChange={(e) => updateField('phoneWhatsApp', e.target.value)}
+                          style={inputStyle}
+                        />
+                      </div>
+                    </div>
+                  )}
+
+                  {/* SECTION 7 */}
+                  {step === 7 && (
+                    <div>
+                      <h3 style={sectionTitleStyle}>SECTION 7: Expectations</h3>
+                      <div style={fieldWrapStyle}>
+                        <label htmlFor="expectations" style={labelStyle}>
+                          What are you expecting from EBL Masterclass 8.0? <span style={{ color: '#f4b942' }}>*</span>
+                        </label>
+                        <textarea
+                          id="expectations"
+                          name="expectations"
+                          rows={5}
+                          value={form.expectations}
+                          onChange={(e) => updateField('expectations', e.target.value)}
+                          style={{
+                            ...inputStyle,
+                            resize: 'vertical',
+                            minHeight: '120px',
+                          }}
+                        />
+                      </div>
+                    </div>
+                  )}
+
+                  {(stepError || submitError) && (
+                    <p
+                      role="alert"
+                      style={{
+                        color: '#ffb4b4',
+                        fontSize: 'clamp(0.875rem, 1.6vw, 1rem)',
+                        marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      {submitError ?? stepError}
+                    </p>
+                  )}
+
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      flexWrap: 'wrap',
+                      gap: 'clamp(0.75rem, 2vw, 1rem)',
+                      justifyContent: 'space-between',
+                      marginTop: 'clamp(1.25rem, 3vw, 1.75rem)',
+                    }}
+                  >
+                    <button
+                      type="button"
+                      onClick={goPrev}
+                      disabled={step === 1 || submitting || success}
+                      style={{
+                        padding: 'clamp(0.75rem, 2vw, 0.9rem) clamp(1.25rem, 3vw, 1.75rem)',
+                        fontFamily: 'Montserrat, sans-serif',
+                        fontSize: 'clamp(0.95rem, 2vw, 1.05rem)',
+                        fontWeight: 600,
+                        color: '#ffffff',
+                        background:
+                          step === 1 || submitting || success ? 'rgba(255,255,255,0.08)' : 'rgba(255, 255, 255, 0.12)',
+                        border: '1px solid rgba(0, 168, 232, 0.4)',
+                        borderRadius: '9999px',
+                        cursor: step === 1 || submitting || success ? 'not-allowed' : 'pointer',
+                        opacity: step === 1 || submitting || success ? 0.5 : 1,
+                      }}
+                    >
+                      Previous
+                    </button>
+
+                    {step < TOTAL_STEPS ? (
+                      <button
+                        type="button"
+                        onClick={goNext}
+                        disabled={submitting || success}
+                        style={{
+                          marginLeft: 'auto',
+                          padding: 'clamp(0.75rem, 2vw, 0.9rem) clamp(1.5rem, 4vw, 2rem)',
+                          fontFamily: 'Montserrat, sans-serif',
+                          fontSize: 'clamp(0.95rem, 2vw, 1.05rem)',
+                          fontWeight: 600,
+                          color: '#ffffff',
+                          background: 'linear-gradient(135deg, #00a8e8 0%, #5fc2b8 100%)',
+                          border: 'none',
+                          borderRadius: '9999px',
+                          cursor: submitting || success ? 'not-allowed' : 'pointer',
+                          boxShadow: '0 0 20px rgba(0, 168, 232, 0.3)',
+                        }}
+                      >
+                        Next
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        id="submit-registration-btn"
+                        onClick={() => {
+                          void handleFinalSubmit();
+                        }}
+                        disabled={submitting || success}
+                        style={{
+                          marginLeft: 'auto',
+                          padding: 'clamp(0.75rem, 2vw, 0.9rem) clamp(1.5rem, 4vw, 2rem)',
+                          fontFamily: 'Montserrat, sans-serif',
+                          fontSize: 'clamp(0.95rem, 2vw, 1.05rem)',
+                          fontWeight: 600,
+                          color: '#ffffff',
+                          background: 'linear-gradient(135deg, #00a8e8 0%, #5fc2b8 100%)',
+                          border: 'none',
+                          borderRadius: '9999px',
+                          cursor: submitting || success ? 'wait' : 'pointer',
+                          opacity: success ? 0.6 : 1,
+                          boxShadow: '0 0 20px rgba(0, 168, 232, 0.3)',
+                        }}
+                      >
+                        {submitting ? 'Submitting…' : 'Submit registration'}
+                      </button>
                     )}
                   </div>
-                )}
-
-                {/* SECTION 4 */}
-                {step === 4 && (
-                  <div>
-                    <h3 style={sectionTitleStyle}>SECTION 4: EBL Academy Interest</h3>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="academy_interest" style={labelStyle}>
-                        Which academy are you interested in this time?{' '}
-                        <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <select
-                        id="academy_interest"
-                        name="academy_interest"
-                        value={form.academyInterest}
-                        onChange={(e) =>
-                          updateField(
-                            'academyInterest',
-                            e.target.value as FormState['academyInterest'],
-                          )
-                        }
-                        style={{ ...inputStyle, cursor: 'pointer' }}
-                      >
-                        <option value="">Select an academy</option>
-                        {ACADEMY_INTEREST_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-                )}
-
-                {/* SECTION 5 */}
-                {step === 5 && (
-                  <div>
-                    <h3 style={sectionTitleStyle}>SECTION 5: Event Commitment</h3>
-                    <div style={fieldWrapStyle}>
-                      <span style={labelStyle}>
-                        Will you be present at the EBL Grand Finale? <span style={{ color: '#f4b942' }}>*</span>
-                      </span>
-                      <div style={radioGroupStyle} role="radiogroup" aria-label="Grand Finale attendance">
-                        {YES_NO.map((opt) => (
-                          <button
-                            key={opt}
-                            type="button"
-                            onClick={() => updateField('grandFinalePresent', opt)}
-                            style={radioOptionStyle(form.grandFinalePresent === opt)}
-                          >
-                            {opt}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* SECTION 6 */}
-                {step === 6 && (
-                  <div>
-                    <h3 style={sectionTitleStyle}>SECTION 6: Contact Information</h3>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="contact_email" style={labelStyle}>
-                        Email Address <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <input
-                        id="contact_email"
-                        name="contact_email"
-                        type="email"
-                        autoComplete="email"
-                        value={form.email}
-                        onChange={(e) => updateField('email', e.target.value)}
-                        style={inputStyle}
-                      />
-                    </div>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="phone_whatsapp" style={labelStyle}>
-                        Phone Number (WhatsApp) <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <input
-                        id="phone_whatsapp"
-                        name="phone_whatsapp"
-                        type="tel"
-                        autoComplete="tel"
-                        placeholder="e.g. +234 800 000 0000"
-                        value={form.phoneWhatsApp}
-                        onChange={(e) => updateField('phoneWhatsApp', e.target.value)}
-                        style={inputStyle}
-                      />
-                    </div>
-                  </div>
-                )}
-
-                {/* SECTION 7 */}
-                {step === 7 && (
-                  <div>
-                    <h3 style={sectionTitleStyle}>SECTION 7: Expectations</h3>
-                    <div style={fieldWrapStyle}>
-                      <label htmlFor="expectations" style={labelStyle}>
-                        What are you expecting from EBL Masterclass 8.0? <span style={{ color: '#f4b942' }}>*</span>
-                      </label>
-                      <textarea
-                        id="expectations"
-                        name="expectations"
-                        rows={5}
-                        value={form.expectations}
-                        onChange={(e) => updateField('expectations', e.target.value)}
-                        style={{
-                          ...inputStyle,
-                          resize: 'vertical',
-                          minHeight: '120px',
-                        }}
-                      />
-                    </div>
-                  </div>
-                )}
-
-                {(stepError || submitError) && (
-                  <p
-                    role="alert"
-                    style={{
-                      color: '#ffb4b4',
-                      fontSize: 'clamp(0.875rem, 1.6vw, 1rem)',
-                      marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    {submitError ?? stepError}
-                  </p>
-                )}
-
-                <div
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    flexWrap: 'wrap',
-                    gap: 'clamp(0.75rem, 2vw, 1rem)',
-                    justifyContent: 'space-between',
-                    marginTop: 'clamp(1.25rem, 3vw, 1.75rem)',
-                  }}
-                >
-                  <button
-                    type="button"
-                    onClick={goPrev}
-                    disabled={step === 1 || submitting || success}
-                    style={{
-                      padding: 'clamp(0.75rem, 2vw, 0.9rem) clamp(1.25rem, 3vw, 1.75rem)',
-                      fontFamily: 'Montserrat, sans-serif',
-                      fontSize: 'clamp(0.95rem, 2vw, 1.05rem)',
-                      fontWeight: 600,
-                      color: '#ffffff',
-                      background:
-                        step === 1 || submitting || success ? 'rgba(255,255,255,0.08)' : 'rgba(255, 255, 255, 0.12)',
-                      border: '1px solid rgba(0, 168, 232, 0.4)',
-                      borderRadius: '9999px',
-                      cursor: step === 1 || submitting || success ? 'not-allowed' : 'pointer',
-                      opacity: step === 1 || submitting || success ? 0.5 : 1,
-                    }}
-                  >
-                    Previous
-                  </button>
-
-                  {step < TOTAL_STEPS ? (
-                    <button
-                      type="button"
-                      onClick={goNext}
-                      disabled={submitting || success}
-                      style={{
-                        marginLeft: 'auto',
-                        padding: 'clamp(0.75rem, 2vw, 0.9rem) clamp(1.5rem, 4vw, 2rem)',
-                        fontFamily: 'Montserrat, sans-serif',
-                        fontSize: 'clamp(0.95rem, 2vw, 1.05rem)',
-                        fontWeight: 600,
-                        color: '#ffffff',
-                        background: 'linear-gradient(135deg, #00a8e8 0%, #5fc2b8 100%)',
-                        border: 'none',
-                        borderRadius: '9999px',
-                        cursor: submitting || success ? 'not-allowed' : 'pointer',
-                        boxShadow: '0 0 20px rgba(0, 168, 232, 0.3)',
-                      }}
-                    >
-                      Next
-                    </button>
-                  ) : (
-                    <button
-                      type="button"
-                      id="submit-registration-btn"
-                      onClick={() => {
-                        void handleFinalSubmit();
-                      }}
-                      disabled={submitting || success}
-                      style={{
-                        marginLeft: 'auto',
-                        padding: 'clamp(0.75rem, 2vw, 0.9rem) clamp(1.5rem, 4vw, 2rem)',
-                        fontFamily: 'Montserrat, sans-serif',
-                        fontSize: 'clamp(0.95rem, 2vw, 1.05rem)',
-                        fontWeight: 600,
-                        color: '#ffffff',
-                        background: 'linear-gradient(135deg, #00a8e8 0%, #5fc2b8 100%)',
-                        border: 'none',
-                        borderRadius: '9999px',
-                        cursor: submitting || success ? 'wait' : 'pointer',
-                        opacity: success ? 0.6 : 1,
-                        boxShadow: '0 0 20px rgba(0, 168, 232, 0.3)',
-                      }}
-                    >
-                      {submitting ? 'Submitting…' : 'Submit registration'}
-                    </button>
-                  )}
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <style>{`
+        <style>{`
         @keyframes fadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
@@ -1036,7 +1039,7 @@ const BookTickets = () => {
           to { transform: rotate(360deg); }
         }
       `}</style>
-    </div>
+      </div>
     </>
   );
 };
