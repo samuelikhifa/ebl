@@ -1,7 +1,7 @@
 // src/pages/BookTickets.tsx
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import { Helmet } from 'react-helmet-async';
-
+const REGISTRATION_OPEN = false; // ← flip to true to reopen
 /*
   Supabase: align `registrants` columns with the insert() payload (snake_case), e.g.:
 
@@ -368,6 +368,128 @@ const BookTickets = () => {
     cursor: 'pointer',
     transition: 'all 0.2s ease',
   });
+
+  if (!REGISTRATION_OPEN) {
+    return (
+      <>
+        <Helmet>
+          <title>Registration Closed | EBL Masterclass 8.0</title>
+          <link rel="canonical" href="https://ebl.jcinuniben.com/BookTickets" />
+        </Helmet>
+        <div style={{ fontFamily: 'Roboto, sans-serif', color: '#ffffff' }}>
+          <section
+            style={{
+              minHeight: '100vh',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'linear-gradient(135deg, #1a1f2e 0%, #000000 100%)',
+              padding: 'clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem)',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
+            {/* Background glows */}
+            {[
+              { top: '15%', right: '10%', color: 'rgba(0,168,232,0.18)', size: '320px', delay: '0s' },
+              { bottom: '10%', left: '8%', color: 'rgba(95,194,184,0.18)', size: '400px', delay: '2s' },
+            ].map((g, i) => (
+              <div key={i} style={{
+                position: 'absolute', width: g.size, height: g.size,
+                ...(g.top ? { top: g.top } : { bottom: (g as any).bottom }),
+                ...(g.right ? { right: g.right } : { left: (g as any).left }),
+                background: `radial-gradient(circle, ${g.color} 0%, transparent 70%)`,
+                borderRadius: '50%', filter: 'blur(60px)',
+                animation: `float 7s ease-in-out infinite`, animationDelay: g.delay,
+              }} />
+            ))}
+
+            <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: '680px', width: '100%' }}>
+              {/* Lock icon */}
+              <div style={{
+                width: 'clamp(72px, 12vw, 96px)', height: 'clamp(72px, 12vw, 96px)',
+                margin: '0 auto clamp(1.5rem, 3vw, 2rem)',
+                background: 'rgba(0,168,232,0.12)',
+                border: '2px solid rgba(0,168,232,0.4)',
+                borderRadius: '50%',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 'clamp(2rem, 5vw, 2.75rem)',
+              }}>
+                🔒
+              </div>
+
+              <h1 style={{
+                fontFamily: 'Montserrat, sans-serif',
+                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                fontWeight: 700, lineHeight: 1.2,
+                marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
+              }}>
+                <span style={{
+                  background: 'linear-gradient(135deg, #00a8e8 0%, #5fc2b8 100%)',
+                  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
+                }}>
+                  Registration
+                </span>{' '}
+                <span style={{ color: '#ffffff' }}>Closed</span>
+              </h1>
+
+              <p style={{
+                fontSize: 'clamp(1rem, 2.2vw, 1.2rem)', lineHeight: 1.8,
+                color: 'rgba(255,255,255,0.7)', marginBottom: 'clamp(1.5rem, 3vw, 2rem)',
+              }}>
+                Registration for <strong style={{ color: '#ffffff' }}>EBL Masterclass 8.0</strong> is now closed.
+                Thank you to everyone who signed up!
+              </p>
+
+              {/* Grand Finale card */}
+              <div style={{
+                background: 'rgba(255,255,255,0.05)',
+                backdropFilter: 'blur(20px)',
+                border: '2px solid rgba(244,185,66,0.45)',
+                borderRadius: 'clamp(1rem, 2vw, 1.25rem)',
+                padding: 'clamp(1.25rem, 3vw, 2rem)',
+                marginBottom: 'clamp(1.5rem, 3vw, 2rem)',
+                boxShadow: '0 0 30px rgba(244,185,66,0.1)',
+              }}>
+                <p style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: 'clamp(0.75rem, 1.5vw, 0.85rem)',
+                  fontWeight: 600, letterSpacing: '0.12em',
+                  color: '#f4b942', textTransform: 'uppercase',
+                  marginBottom: '0.5rem',
+                }}>
+                  🏆 Grand Finale
+                </p>
+                <p style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+                  fontWeight: 700, color: '#ffffff',
+                  marginBottom: '0.35rem',
+                }}>
+                  July 18, 2025
+                </p>
+                <p style={{
+                  fontSize: 'clamp(0.9rem, 1.8vw, 1rem)',
+                  color: 'rgba(255,255,255,0.6)', lineHeight: 1.6,
+                }}>
+                  The Grand Finale holds <strong style={{ color: 'rgba(255,255,255,0.9)' }}>physically</strong> — mark your calendar and show up!
+                </p>
+              </div>
+
+         
+            </div>
+          </section>
+
+          <style>{`
+            @keyframes float {
+              0%, 100% { transform: translateY(0); }
+              50% { transform: translateY(-20px); }
+            }
+          `}</style>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
